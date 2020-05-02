@@ -19,6 +19,7 @@ Core modules like math, random, numpy etc... not included.
 * [matplotlib](https://matplotlib.org/) - Basic plotting.
 * [seaborn](https://seaborn.pydata.org/) - More complex plotting.
 * [SymPy](https://www.sympy.org/en/index.html) - Symbolic Python. Solving equations symbolically.
+* [PySerial](https://pyserial.readthedocs.io/en/latest/pyserial.html) - Allows Python to read Serial in.
 
 ### Arduino Libraries
 
