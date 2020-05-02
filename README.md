@@ -1,10 +1,12 @@
 # Swarm Robots Localisation Code
 
-In supplement to the MP Lab robot code in [Swarm Robots](https://github.com/JamieS1211/GroupSwarmRobots), this repository contains additional Python and Arduino Code. The majority of this code was produced for the localisation system.
+In addition to the MP Lab robot code in [Swarm Robots](https://github.com/JamieS1211/GroupSwarmRobots), this repository contains additional Python and Arduino Code. The majority of this code was produced for the localisation system.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+Please run every python script in it's own directory.
 
 ### Software
 
@@ -13,13 +15,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Python Modules
 
-Core modules like math, random, numpy etc... not included.
+Core modules like math, random, numpy etc... not included. Yu can either create a virtual environment in the directory or just install these modules to you python installation.
 
 * [pandas](https://pandas.pydata.org/) - Dataframe creation.
 * [matplotlib](https://matplotlib.org/) - Basic plotting.
 * [seaborn](https://seaborn.pydata.org/) - More complex plotting.
 * [SymPy](https://www.sympy.org/en/index.html) - Symbolic Python. Solving equations symbolically.
 * [PySerial](https://pyserial.readthedocs.io/en/latest/pyserial.html) - Allows Python to read Serial in.
+* [opencv](https://pypi.org/project/opencv-python/) - Used for the object tracking and detection.
+* [CamGear](https://github.com/abhiTronix/vidgear/wiki/CamGear) - Used to interact with live video streams.
+* [pafy](https://pypi.org/project/pafy/) - Used to interact with youtube livestreams.
 
 ### Arduino Libraries
 
