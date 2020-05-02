@@ -15,7 +15,7 @@ Please run every python script in it's own directory.
 
 ### Python Modules
 
-Core modules like math, random, numpy etc... not included. Yu can either create a virtual environment in the directory or just install these modules to you python installation.
+Core modules like math, random, numpy etc... not included. You can either create a virtual environment in the directory or just install these modules to you python installation.
 
 * [pandas](https://pandas.pydata.org/) - Dataframe creation.
 * [matplotlib](https://matplotlib.org/) - Basic plotting.
