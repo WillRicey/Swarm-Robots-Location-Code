@@ -26,8 +26,8 @@ def rollingaverage(dataframe, steps, first_val=3.56):
     """    
     out = []
     for index, row in dataframe.iterrows():
-        average = (average*(steps-1)+row[1])/steps
-        out.append(average)
+        first_val = (first_val*(steps-1)+row[1])/steps
+        out.append(first_val)
     return out
 
 # Read in data
@@ -57,5 +57,4 @@ plt.ylabel('Voltage across battery (V)')
 plt.legend()
 
 plt.show()
-
 #plt.savefig('battery_charge.pdf')
