@@ -34,19 +34,32 @@ def run_scenario(move,phi,r1,rErr,tfErr):
 
     Returns:
         float -- Size of error range
-    """ 
+    """
+    # Defining
     start_coord = [0,r1]
     end_coord = [0,0]
 
+    # Redefining end point
     end_coord[0] = start_coord[0] + move*math.cos(phi)
     end_coord[1] = start_coord[1] + move*math.sin(phi)
 
+    # Calculating Ending seperation
     r2 = math.sqrt(end_coord[0]**2 + end_coord[1]**2)
 
+    # Calling scenario from PositionFunctions.py
     error = pf.errorrange(move, phi, r1, r2, rErr, 0, tfErr)
     return error
 
 def quick_rand(variaboi, smp_num):
+    """Quickly creates an array of random points.
+
+    Arguments:
+        variaboi {list: size 3} -- Variable nominal range in form; min, mode, max.
+        smp_num {int} -- Number of random points to generate.
+
+    Returns:
+        numpy array
+    """    
     return variaboi[0] + (variaboi[2]-variaboi[0])*np.random.random(smp_num)
 
 # Defining ranges
@@ -56,7 +69,7 @@ start_radius = [100, 1000, 3000]
 radius_error = [0, 0.2, 0.4]
 tferror = [0, 100, 200]
 
-# Nominal
+# Nominal scenario
 nom = run_scenario(move_dist[1],phis[1],start_radius[1],radius_error[1],tferror[1])
 
 # Create random samples
@@ -81,11 +94,12 @@ df = pd.DataFrame(list(zip(rand_move,rand_phis,rand_stra,rand_rade,rand_tfer,res
 # Convert movement error to %
 df['Movement error (%)'] = df['Movement error (%)']*100
 
-# Create radius 2
+# Create radius 2, ultimately unused
 df['x'] = 0 + df['Movement Distance (mm)']*np.cos(df['Movement angle (rad)'])
 df['y'] = df['Starting Seperation (mm)'] + df['Movement Distance (mm)']*np.sin(df['Movement angle (rad)'])
 df['Ending Seperation (mm)'] = np.sqrt(df['x']**2 + df['y']**2)
 
+# Plotting
 g = sns.PairGrid(
     df,
     y_vars=["Error size (rad)"],

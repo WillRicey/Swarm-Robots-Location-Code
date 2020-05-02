@@ -1,3 +1,12 @@
+'''
+SympySolution.py
+----------------
+Created by Will Rice
+
+Solving the robot positioning symbolically.
+'''
+
+# Importing Modules
 import math
 import sympy as syp
 
@@ -72,5 +81,3 @@ def sypOverlap():
     modeC = syp.simplify(modeC)
 
     return modeC
-
-    

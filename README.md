@@ -13,7 +13,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Python Modules
 
-* [Python](https://www.python.org/) - The main programming language used. 3.7 release was used for all python code. Check specific modules for compatibility.
+Core modules like math, random, numpy etc... not included.
+
+* [pandas](https://pandas.pydata.org/) - Dataframe creation.
+* [matplotlib](https://matplotlib.org/) - Basic plotting.
+* [seaborn](https://seaborn.pydata.org/) - More complex plotting.
+* [SymPy](https://www.sympy.org/en/index.html) - Symbolic Python. Solving equations symbolically.
 
 ### Arduino Libraries
 
